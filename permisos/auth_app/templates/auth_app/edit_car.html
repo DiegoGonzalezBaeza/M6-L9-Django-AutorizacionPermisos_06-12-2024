@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Car</title>
+</head>
+<body>
+    <h1>Edit Car</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" value="{{ car.model }}" required>
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" value="{{ car.year }}" required>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
